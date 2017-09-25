@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <style type="text/css">
+      #foo {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="foo"></div>
+    <script src="openseadragon/openseadragon.min.js"></script>
+    <script>
+      var viewer = OpenSeadragon({
+        id:            'foo',
+        prefixUrl:     'openseadragon/images/',
+        tileSources:   'gorgias.dzi',      
+        showNavigator:  true,
+        degrees: 90,
+        showRotationControl: true,
+        gestureSettingsTouch: {
+        pinchRotate: true
+        },
+      });
+    </script>
+  </body>
+</html>
